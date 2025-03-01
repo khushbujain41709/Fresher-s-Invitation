@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshers' Party Invitation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("hii.jpg") no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            margin: 15px;
+            padding: 12px 25px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .yes {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+        }
+        .yes:hover {
+            background: linear-gradient(45deg, #ff1493, #c71585);
+        }
+        .no {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Would You Like to Attend the Freshers' Party with me?</h2>
+        <button class="yes" onclick="location.href = 'dashboard.html'">YES</button>
+        <button class="no" id="noButton">NO</button>
+    </div>
+    <script>
+        const noButton = document.getElementById("noButton");
+        noButton.addEventListener("mouseover", function () {
+            const x = Math.random() * (window.innerWidth - 150);
+            const y = Math.random() * (window.innerHeight - 100);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
